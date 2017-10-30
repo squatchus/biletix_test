@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2396A4E94434AED20DB8F8 /* libPods-biletix_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C093C31948080C49D77CBCB9 /* libPods-biletix_test.a */; };
 		B42B141D1FA3DCE60044E7E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141C1FA3DCE60044E7E4 /* AppDelegate.m */; };
 		B42B14201FA3DCE60044E7E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141F1FA3DCE60044E7E4 /* ViewController.m */; };
 		B42B14231FA3DCE60044E7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42B14211FA3DCE60044E7E4 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21461A2859992EE75316DC4D /* Pods-biletix_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test.debug.xcconfig"; sourceTree = "<group>"; };
 		B42B14181FA3DCE60044E7E4 /* biletix_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biletix_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42B141B1FA3DCE60044E7E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B42B141C1FA3DCE60044E7E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		B42B14271FA3DCE60044E7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B42B14291FA3DCE60044E7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42B142A1FA3DCE60044E7E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C093C31948080C49D77CBCB9 /* libPods-biletix_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-biletix_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF72C196EDA878746F16508 /* Pods-biletix_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2396A4E94434AED20DB8F8 /* libPods-biletix_test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06105B94FC44CAC1F3909695 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21461A2859992EE75316DC4D /* Pods-biletix_test.debug.xcconfig */,
+				CEF72C196EDA878746F16508 /* Pods-biletix_test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1CF0EC9034466A754B5B16EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C093C31948080C49D77CBCB9 /* libPods-biletix_test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B42B140F1FA3DCE60044E7E4 = {
 			isa = PBXGroup;
 			children = (
 				B42B141A1FA3DCE60044E7E4 /* biletix_test */,
 				B42B14191FA3DCE60044E7E4 /* Products */,
+				06105B94FC44CAC1F3909695 /* Pods */,
+				1CF0EC9034466A754B5B16EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B42B142E1FA3DCE60044E7E4 /* Build configuration list for PBXNativeTarget "biletix_test" */;
 			buildPhases = (
+				D5DBB9A0680F058A7699ACB8 /* [CP] Check Pods Manifest.lock */,
 				B42B14141FA3DCE60044E7E4 /* Sources */,
 				B42B14151FA3DCE60044E7E4 /* Frameworks */,
 				B42B14161FA3DCE60044E7E4 /* Resources */,
+				F603C943D1388D709740238A /* [CP] Embed Pods Frameworks */,
+				7467821D677CBAE955F9C53E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7467821D677CBAE955F9C53E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5DBB9A0680F058A7699ACB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F603C943D1388D709740238A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B42B14141FA3DCE60044E7E4 /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		B42B142F1FA3DCE60044E7E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21461A2859992EE75316DC4D /* Pods-biletix_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +366,7 @@
 		};
 		B42B14301FA3DCE60044E7E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF72C196EDA878746F16508 /* Pods-biletix_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
