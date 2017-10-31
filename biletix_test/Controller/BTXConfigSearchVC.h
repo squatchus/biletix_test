@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BTXConfigSearchVC.h
 //  biletix_test
 //
 //  Created by Sergey Mazulev on 10/28/17.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface BTXConfigSearchVC : UIViewController
 
 
 @end

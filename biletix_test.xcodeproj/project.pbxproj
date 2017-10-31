@@ -8,26 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		5E2396A4E94434AED20DB8F8 /* libPods-biletix_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C093C31948080C49D77CBCB9 /* libPods-biletix_test.a */; };
-		B42B141D1FA3DCE60044E7E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141C1FA3DCE60044E7E4 /* AppDelegate.m */; };
-		B42B14201FA3DCE60044E7E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141F1FA3DCE60044E7E4 /* ViewController.m */; };
+		B42B141D1FA3DCE60044E7E4 /* BTXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141C1FA3DCE60044E7E4 /* BTXAppDelegate.m */; };
+		B42B14201FA3DCE60044E7E4 /* BTXConfigSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B141F1FA3DCE60044E7E4 /* BTXConfigSearchVC.m */; };
 		B42B14231FA3DCE60044E7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42B14211FA3DCE60044E7E4 /* Main.storyboard */; };
 		B42B14251FA3DCE60044E7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42B14241FA3DCE60044E7E4 /* Assets.xcassets */; };
 		B42B14281FA3DCE60044E7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42B14261FA3DCE60044E7E4 /* LaunchScreen.storyboard */; };
 		B42B142B1FA3DCE60044E7E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B142A1FA3DCE60044E7E4 /* main.m */; };
+		B43B80041FA782040071AD06 /* BTXSearchResultsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B80031FA782040071AD06 /* BTXSearchResultsTVC.m */; };
+		B43B80071FA7867C0071AD06 /* BTXApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B80061FA7867C0071AD06 /* BTXApiClient.m */; };
+		B43B800D1FA792E00071AD06 /* BTXFare.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B800C1FA792E00071AD06 /* BTXFare.m */; };
+		B43B80101FA7937F0071AD06 /* BTXFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B800F1FA7937F0071AD06 /* BTXFlight.m */; };
+		B43B80141FA7C9030071AD06 /* BTXXmlFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B80131FA7C9030071AD06 /* BTXXmlFormatter.m */; };
+		B44112371FA87D2100F41444 /* BTXGetOptimalFaresParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B44112361FA87D2100F41444 /* BTXGetOptimalFaresParser.m */; };
+		B441123E1FA8B21E00F41444 /* BTXFareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */; };
+		B4DDE22C1FA7DE780017482E /* BTXApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE22B1FA7DE780017482E /* BTXApiConstants.m */; };
+		B4DDE22F1FA7E6A70017482E /* BTXStartSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE22E1FA7E6A70017482E /* BTXStartSessionRequest.m */; };
+		B4DDE2321FA7F4110017482E /* BTXHashGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE2311FA7F4110017482E /* BTXHashGenerator.m */; };
+		B4DDE2351FA7FBA20017482E /* BTXGetOptimalFaresRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE2341FA7FBA20017482E /* BTXGetOptimalFaresRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21461A2859992EE75316DC4D /* Pods-biletix_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test.debug.xcconfig"; sourceTree = "<group>"; };
 		B42B14181FA3DCE60044E7E4 /* biletix_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biletix_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42B141B1FA3DCE60044E7E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B42B141C1FA3DCE60044E7E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B42B141E1FA3DCE60044E7E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B42B141F1FA3DCE60044E7E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B42B141B1FA3DCE60044E7E4 /* BTXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXAppDelegate.h; sourceTree = "<group>"; };
+		B42B141C1FA3DCE60044E7E4 /* BTXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXAppDelegate.m; sourceTree = "<group>"; };
+		B42B141E1FA3DCE60044E7E4 /* BTXConfigSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXConfigSearchVC.h; sourceTree = "<group>"; };
+		B42B141F1FA3DCE60044E7E4 /* BTXConfigSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXConfigSearchVC.m; sourceTree = "<group>"; };
 		B42B14221FA3DCE60044E7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B42B14241FA3DCE60044E7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42B14271FA3DCE60044E7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B42B14291FA3DCE60044E7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B42B142A1FA3DCE60044E7E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B43B80021FA782040071AD06 /* BTXSearchResultsTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXSearchResultsTVC.h; sourceTree = "<group>"; };
+		B43B80031FA782040071AD06 /* BTXSearchResultsTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXSearchResultsTVC.m; sourceTree = "<group>"; };
+		B43B80051FA7867C0071AD06 /* BTXApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXApiClient.h; sourceTree = "<group>"; };
+		B43B80061FA7867C0071AD06 /* BTXApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXApiClient.m; sourceTree = "<group>"; };
+		B43B800B1FA792E00071AD06 /* BTXFare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXFare.h; sourceTree = "<group>"; };
+		B43B800C1FA792E00071AD06 /* BTXFare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXFare.m; sourceTree = "<group>"; };
+		B43B800E1FA7937F0071AD06 /* BTXFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXFlight.h; sourceTree = "<group>"; };
+		B43B800F1FA7937F0071AD06 /* BTXFlight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXFlight.m; sourceTree = "<group>"; };
+		B43B80111FA7A7F60071AD06 /* BTXApiConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXApiConstants.h; sourceTree = "<group>"; };
+		B43B80121FA7C9030071AD06 /* BTXXmlFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXXmlFormatter.h; sourceTree = "<group>"; };
+		B43B80131FA7C9030071AD06 /* BTXXmlFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXXmlFormatter.m; sourceTree = "<group>"; };
+		B44112351FA87D2100F41444 /* BTXGetOptimalFaresParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXGetOptimalFaresParser.h; sourceTree = "<group>"; };
+		B44112361FA87D2100F41444 /* BTXGetOptimalFaresParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXGetOptimalFaresParser.m; sourceTree = "<group>"; };
+		B44112381FA8A25C00F41444 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		B441123C1FA8B21E00F41444 /* BTXFareTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXFareTableViewCell.h; sourceTree = "<group>"; };
+		B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXFareTableViewCell.m; sourceTree = "<group>"; };
+		B4DDE22B1FA7DE780017482E /* BTXApiConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXApiConstants.m; sourceTree = "<group>"; };
+		B4DDE22D1FA7E6A70017482E /* BTXStartSessionRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXStartSessionRequest.h; sourceTree = "<group>"; };
+		B4DDE22E1FA7E6A70017482E /* BTXStartSessionRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXStartSessionRequest.m; sourceTree = "<group>"; };
+		B4DDE2301FA7F4110017482E /* BTXHashGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXHashGenerator.h; sourceTree = "<group>"; };
+		B4DDE2311FA7F4110017482E /* BTXHashGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXHashGenerator.m; sourceTree = "<group>"; };
+		B4DDE2331FA7FBA20017482E /* BTXGetOptimalFaresRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXGetOptimalFaresRequest.h; sourceTree = "<group>"; };
+		B4DDE2341FA7FBA20017482E /* BTXGetOptimalFaresRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXGetOptimalFaresRequest.m; sourceTree = "<group>"; };
 		C093C31948080C49D77CBCB9 /* libPods-biletix_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-biletix_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF72C196EDA878746F16508 /* Pods-biletix_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-biletix_test/Pods-biletix_test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,17 +116,88 @@
 		B42B141A1FA3DCE60044E7E4 /* biletix_test */ = {
 			isa = PBXGroup;
 			children = (
-				B42B141B1FA3DCE60044E7E4 /* AppDelegate.h */,
-				B42B141C1FA3DCE60044E7E4 /* AppDelegate.m */,
-				B42B141E1FA3DCE60044E7E4 /* ViewController.h */,
-				B42B141F1FA3DCE60044E7E4 /* ViewController.m */,
-				B42B14211FA3DCE60044E7E4 /* Main.storyboard */,
+				B44112381FA8A25C00F41444 /* README.txt */,
+				B43B80161FA7D5970071AD06 /* Model */,
+				B43B801A1FA7D6410071AD06 /* View */,
+				B43B80191FA7D6300071AD06 /* Controller */,
+				B43B80171FA7D5B00071AD06 /* NetworkServices */,
+				B43B80151FA7C90D0071AD06 /* Helpers */,
+				B43B80181FA7D61C0071AD06 /* SupportingFiles */,
+			);
+			path = biletix_test;
+			sourceTree = "<group>";
+		};
+		B43B80151FA7C90D0071AD06 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B43B80121FA7C9030071AD06 /* BTXXmlFormatter.h */,
+				B43B80131FA7C9030071AD06 /* BTXXmlFormatter.m */,
+				B4DDE2301FA7F4110017482E /* BTXHashGenerator.h */,
+				B4DDE2311FA7F4110017482E /* BTXHashGenerator.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B43B80161FA7D5970071AD06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B43B800E1FA7937F0071AD06 /* BTXFlight.h */,
+				B43B800F1FA7937F0071AD06 /* BTXFlight.m */,
+				B43B800B1FA792E00071AD06 /* BTXFare.h */,
+				B43B800C1FA792E00071AD06 /* BTXFare.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B43B80171FA7D5B00071AD06 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				B43B80051FA7867C0071AD06 /* BTXApiClient.h */,
+				B43B80061FA7867C0071AD06 /* BTXApiClient.m */,
+				B43B80111FA7A7F60071AD06 /* BTXApiConstants.h */,
+				B4DDE22B1FA7DE780017482E /* BTXApiConstants.m */,
+				B4DDE22D1FA7E6A70017482E /* BTXStartSessionRequest.h */,
+				B4DDE22E1FA7E6A70017482E /* BTXStartSessionRequest.m */,
+				B4DDE2331FA7FBA20017482E /* BTXGetOptimalFaresRequest.h */,
+				B4DDE2341FA7FBA20017482E /* BTXGetOptimalFaresRequest.m */,
+				B44112351FA87D2100F41444 /* BTXGetOptimalFaresParser.h */,
+				B44112361FA87D2100F41444 /* BTXGetOptimalFaresParser.m */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		B43B80181FA7D61C0071AD06 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B42B141B1FA3DCE60044E7E4 /* BTXAppDelegate.h */,
+				B42B141C1FA3DCE60044E7E4 /* BTXAppDelegate.m */,
 				B42B14241FA3DCE60044E7E4 /* Assets.xcassets */,
-				B42B14261FA3DCE60044E7E4 /* LaunchScreen.storyboard */,
 				B42B14291FA3DCE60044E7E4 /* Info.plist */,
 				B42B142A1FA3DCE60044E7E4 /* main.m */,
 			);
-			path = biletix_test;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B43B80191FA7D6300071AD06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B42B141E1FA3DCE60044E7E4 /* BTXConfigSearchVC.h */,
+				B42B141F1FA3DCE60044E7E4 /* BTXConfigSearchVC.m */,
+				B43B80021FA782040071AD06 /* BTXSearchResultsTVC.h */,
+				B43B80031FA782040071AD06 /* BTXSearchResultsTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B43B801A1FA7D6410071AD06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B42B14211FA3DCE60044E7E4 /* Main.storyboard */,
+				B42B14261FA3DCE60044E7E4 /* LaunchScreen.storyboard */,
+				B441123C1FA8B21E00F41444 /* BTXFareTableViewCell.h */,
+				B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +229,7 @@
 		B42B14101FA3DCE60044E7E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BTX;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Sergey Mazulev";
 				TargetAttributes = {
@@ -217,9 +323,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42B14201FA3DCE60044E7E4 /* ViewController.m in Sources */,
+				B42B14201FA3DCE60044E7E4 /* BTXConfigSearchVC.m in Sources */,
+				B4DDE22C1FA7DE780017482E /* BTXApiConstants.m in Sources */,
+				B44112371FA87D2100F41444 /* BTXGetOptimalFaresParser.m in Sources */,
+				B43B800D1FA792E00071AD06 /* BTXFare.m in Sources */,
+				B43B80101FA7937F0071AD06 /* BTXFlight.m in Sources */,
+				B4DDE2351FA7FBA20017482E /* BTXGetOptimalFaresRequest.m in Sources */,
 				B42B142B1FA3DCE60044E7E4 /* main.m in Sources */,
-				B42B141D1FA3DCE60044E7E4 /* AppDelegate.m in Sources */,
+				B4DDE22F1FA7E6A70017482E /* BTXStartSessionRequest.m in Sources */,
+				B441123E1FA8B21E00F41444 /* BTXFareTableViewCell.m in Sources */,
+				B42B141D1FA3DCE60044E7E4 /* BTXAppDelegate.m in Sources */,
+				B43B80041FA782040071AD06 /* BTXSearchResultsTVC.m in Sources */,
+				B43B80071FA7867C0071AD06 /* BTXApiClient.m in Sources */,
+				B4DDE2321FA7F4110017482E /* BTXHashGenerator.m in Sources */,
+				B43B80141FA7C9030071AD06 /* BTXXmlFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +473,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVARA599XL;
-				INFOPLIST_FILE = biletix_test/Info.plist;
+				INFOPLIST_FILE = biletix_test/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "suricatum.biletix-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suricatum.biletix-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,11 +488,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVARA599XL;
-				INFOPLIST_FILE = biletix_test/Info.plist;
+				INFOPLIST_FILE = biletix_test/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "suricatum.biletix-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suricatum.biletix-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BTXAppDelegate.h
 //  biletix_test
 //
 //  Created by Sergey Mazulev on 10/28/17.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BTXAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end

@@ -1,22 +1,22 @@
 //
-//  AppDelegate.m
+//  BTXAppDelegate.m
 //  biletix_test
 //
 //  Created by Sergey Mazulev on 10/28/17.
 //  Copyright © 2017 Sergey Mazulev. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BTXAppDelegate.h"
 
-@interface AppDelegate ()
+@interface BTXAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BTXAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    return YES;
  }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
