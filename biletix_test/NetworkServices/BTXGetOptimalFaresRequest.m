@@ -58,13 +58,13 @@ static NSString *const kCurrencyResponseKeyPath = @"Body.GetOptimalFaresOutput.c
                 failure:(nonnull void(^)(NSString* _Nullable error))failureBlock {
     NSString *url = BTXApiURL;
     [super requestURL:url soapAction:kActionName completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
-        NSArray *fares = [BTXGetOptimalFaresParser faresFromResponseDict:dict];
-        if (statusCode == BTXApiSuccessCode && fares)
-            successBlock(fares);
-        else if (!fares)
-            failureBlock(BTXErrorParsingFailed);
-        else
-            failureBlock(BTXErrorFailedByStatusCode);
+        [BTXGetOptimalFaresParser parseResponseDict:dict success:^(NSArray<BTXFare *> * _Nonnull fares) {
+            if (statusCode == BTXApiSuccessCode && fares) successBlock(fares);
+            else if (!fares) failureBlock(BTXErrorParsingFailed);
+            else failureBlock(BTXErrorFailedByStatusCode);
+        } failure:^(NSString * _Nullable error) {
+            failureBlock(error);
+        }];
     } failWithError:^(NSError *error) {
         failureBlock([error localizedDescription]);
     }];

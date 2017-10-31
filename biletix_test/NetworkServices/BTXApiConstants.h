@@ -14,6 +14,7 @@
 FOUNDATION_EXPORT NSString* const BTXApiURL;
 FOUNDATION_EXPORT NSInteger const BTXApiSuccessCode;
 
+FOUNDATION_EXPORT NSString* const BTXErrorFaresNotFound;
 FOUNDATION_EXPORT NSString* const BTXErrorMissingToken;
 FOUNDATION_EXPORT NSString* const BTXErrorFailedByStatusCode;
 FOUNDATION_EXPORT NSString* const BTXErrorParsingFailed;

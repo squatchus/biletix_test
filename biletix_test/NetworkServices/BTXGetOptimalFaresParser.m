@@ -9,13 +9,18 @@
 #import "BTXGetOptimalFaresParser.h"
 #import "BTXFare.h"
 #import "BTXFlight.h"
+#import "BTXApiConstants.h"
 
+static NSString* const kErrorKeyPath = @"Body.GetOptimalFaresOutput.error";
 static NSString* const kCurrencyKeyPath = @"Body.GetOptimalFaresOutput.currency";
-static NSString* const kOffersKeyPath = @"Body.GetOptimalFaresOutput.offers.GetOptimalFaresOffer";
+static NSString* const kOffersKeyPath = @"Body.GetOptimalFaresOutput.offers";
 static NSString* const kDirectionsKeyPath = @"directions.GetOptimalFaresDirection";
 static NSString* const kFlightsKeyPath = @"flights.GetOptimalFaresFlight";
 static NSString* const kFlightInfoKeyPath = @"segments.AirSegment";
 
+static NSString* const kErrorCodeKey = @"code";
+static NSString* const kErrorDescriptionKey = @"description";
+static NSString* const kOfferFaresKey = @"GetOptimalFaresOffer";
 static NSString* const kOfferLinkKey = @"link";
 static NSString* const kFlightLinkKey = @"link";
 static NSString* const kTotalPriceKey = @"total_price";
@@ -28,15 +33,23 @@ static NSString* const kArrivalDateKey = @"arrival_date";
 static NSString* const kArrivalTimeKey = @"arrival_time";
 static NSString* const kArrivalAirportKey = @"arrival_airport_code";
 
+static NSString* const kErrorCodeOKValue = @"OK";
+
 @implementation BTXGetOptimalFaresParser
 
-+ (NSArray <BTXFare *>*)faresFromResponseDict:(NSDictionary *)dict {
++ (void)parseResponseDict:(nonnull NSDictionary *)dict
+                  success:(nonnull void(^)(NSArray<BTXFare *>* _Nonnull fares))successBlock
+                  failure:(nonnull void(^)(NSString* _Nullable error))failureBlock {
     @try {
+        NSString *error = [BTXGetOptimalFaresParser errorFromDict:dict];
+        if (error) {  failureBlock(error); return; }
+
+        id offers = [dict valueForKeyPath:kOffersKeyPath];
+        id offerFares = offers[kOfferFaresKey];
+        NSString *currency = [dict valueForKeyPath:kCurrencyKeyPath];
         NSMutableArray *fares = [NSMutableArray new];
         
-        NSString *currency = [dict valueForKeyPath:kCurrencyKeyPath];
-        NSArray *offers = [dict valueForKeyPath:kOffersKeyPath];
-        for (NSDictionary *offer in offers) {
+        for (NSDictionary *offer in offerFares) {
             NSNumber *price = offer[kTotalPriceKey];
             NSString *offerLink = offer[kOfferLinkKey];
             id directions = [offer valueForKeyPath:kDirectionsKeyPath];
@@ -51,13 +64,11 @@ static NSString* const kArrivalAirportKey = @"arrival_airport_code";
                     [fares addObject:fare];
                 }
         }
-        return [fares copy];
+        successBlock([fares copy]);
     }
     @catch (NSException *exception) {
-        NSLog(@"Error (can't parse response): %@", exception);
-        return nil;
+        failureBlock(BTXErrorParsingFailed);
     }
-    return nil;
 }
 
 + (NSArray <BTXFlight *>*)flightsFromSoapNode:(id)node {
@@ -84,6 +95,22 @@ static NSString* const kArrivalAirportKey = @"arrival_airport_code";
     NSString *arrTime = flightInfo[kArrivalTimeKey];
     BTXFlight *flight = [[BTXFlight alloc] initWithNumber:number departureDate:depDate departureTime:depTime departureAirport:depAirport arrivalDate:arrDate arrivalTime:arrTime arrivalAirport:arrAirport link:link];
     return flight;
+}
+
++ (NSString *)errorFromDict:(NSDictionary *)dict {
+    NSDictionary *errorDict = [dict valueForKeyPath:kErrorKeyPath];
+    NSString *errorCode = errorDict[kErrorCodeKey];
+    NSString *errorDescription = errorDict[kErrorDescriptionKey];
+    if (![errorCode isEqualToString:kErrorCodeOKValue]) return errorDescription;
+    
+    id offers = [dict valueForKeyPath:kOffersKeyPath];
+    if (![offers isKindOfClass:[NSDictionary class]]) return BTXErrorFaresNotFound;
+    
+    NSArray *fares = offers[kOfferFaresKey];
+    if (![fares isKindOfClass:[NSArray class]]) return BTXErrorFaresNotFound;
+    
+    if (fares.count == 0) return BTXErrorFaresNotFound;
+    return nil;
 }
 
 @end

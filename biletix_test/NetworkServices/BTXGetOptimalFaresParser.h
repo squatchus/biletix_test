@@ -12,6 +12,8 @@
 
 @interface BTXGetOptimalFaresParser : NSObject
 
-+ (NSArray <BTXFare *>*)faresFromResponseDict:(NSDictionary *)dict;
++ (void)parseResponseDict:(nonnull NSDictionary *)dict
+                  success:(nonnull void(^)(NSArray<BTXFare *>* _Nonnull fares))successBlock
+                  failure:(nonnull void(^)(NSString* _Nullable error))failureBlock;
 
 @end

@@ -13,6 +13,7 @@ NSString* const BTXApiURL = @"https://search.biletix.ru/bitrix/components/travel
 NSInteger const BTXApiSuccessCode = 200;
 
 // client errors
+NSString* const BTXErrorFaresNotFound = @"No flights with such parameters";
 NSString* const BTXErrorMissingToken = @"TOKEN_NOT_FOUND";
 NSString* const BTXErrorFailedByStatusCode = @"WRONG_CODE";
 NSString* const BTXErrorParsingFailed = @"PARSING_FAILED";
