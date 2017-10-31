@@ -19,14 +19,14 @@
                         arrivalAirport:(nonnull NSString *)arrivalAirport
                                   link:(nonnull NSString *)link {
     if (self = [super init]) {
-        _flightNumber = flightNumber;
-        _departureDate = departureDate;
-        _departureTime = departureTime;
-        _departureAirport = departureAirport;
-        _arrivalDate = arrivalDate;
-        _arrivalTime = arrivalTime;
-        _arrivalAirport = arrivalAirport;
-        _linkSuffix = link;
+        _flightNumber = [flightNumber copy];
+        _departureDate = [departureDate copy];
+        _departureTime = [departureTime copy];
+        _departureAirport = [departureAirport copy];
+        _arrivalDate = [arrivalDate copy];
+        _arrivalTime = [arrivalTime copy];
+        _arrivalAirport = [arrivalAirport copy];
+        _linkSuffix = [link copy];
     }
     return self;
 }

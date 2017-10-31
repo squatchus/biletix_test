@@ -32,46 +32,35 @@ static NSString* const kFareCellIdentifier = @"FareCell";
     return controller;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (self.fares) return 1;
-    else return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.fares) return self.fares.count;
-    else return 0;
+    return self.fares.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BTXFareTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFareCellIdentifier forIndexPath:indexPath];
-    if (self.fares.count > indexPath.row) {
-        BTXFare *fare = self.fares[indexPath.row];
-        cell.priceLabel.text = [@[fare.price, fare.currency] componentsJoinedByString:@"\n"];
-        cell.outFlightLabel.text = fare.outboundFlight.flightNumber;
-        cell.retFlightLabel.text = fare.returnFlight.flightNumber;
-        cell.outDepDateLabel.text = fare.outboundFlight.departureDate;
-        cell.outArrDateLabel.text = fare.outboundFlight.arrivalDate;
-        cell.retDepDateLabel.text = fare.returnFlight.departureDate;
-        cell.retArrDateLabel.text = fare.returnFlight.arrivalDate;
-        NSString *outDepPortTime = [NSString stringWithFormat:@"%@ %@",
-                                    fare.outboundFlight.departureAirport, fare.outboundFlight.departureTime];
-        NSString *outArrPortTime = [NSString stringWithFormat:@"%@ %@",
-                                    fare.outboundFlight.arrivalAirport, fare.outboundFlight.arrivalTime];
-        NSString *retDepPortTime = [NSString stringWithFormat:@"%@ %@",
-                                    fare.returnFlight.departureAirport, fare.returnFlight.departureTime];
-        NSString *retArrPortTime = [NSString stringWithFormat:@"%@ %@",
-                                    fare.returnFlight.arrivalAirport, fare.returnFlight.arrivalTime];
-        cell.outDepAirportTimeLabel.text = outDepPortTime;
-        cell.outArrAirportTimeLabel.text = outArrPortTime;
-        cell.retDepAirportTimeLabel.text = retDepPortTime;
-        cell.retArrAirportTimeLabel.text = retArrPortTime;
-    }
+
+    BTXFare *fare = self.fares[indexPath.row];
+    cell.priceLabel.text = [@[fare.price, fare.currency] componentsJoinedByString:@"\n"];
+    cell.outFlightLabel.text = fare.outboundFlight.flightNumber;
+    cell.retFlightLabel.text = fare.returnFlight.flightNumber;
+    cell.outDepDateLabel.text = fare.outboundFlight.departureDate;
+    cell.outArrDateLabel.text = fare.outboundFlight.arrivalDate;
+    cell.retDepDateLabel.text = fare.returnFlight.departureDate;
+    cell.retArrDateLabel.text = fare.returnFlight.arrivalDate;
+    NSString *outDepPortTime = [NSString stringWithFormat:@"%@ %@",
+                                fare.outboundFlight.departureAirport, fare.outboundFlight.departureTime];
+    NSString *outArrPortTime = [NSString stringWithFormat:@"%@ %@",
+                                fare.outboundFlight.arrivalAirport, fare.outboundFlight.arrivalTime];
+    NSString *retDepPortTime = [NSString stringWithFormat:@"%@ %@",
+                                fare.returnFlight.departureAirport, fare.returnFlight.departureTime];
+    NSString *retArrPortTime = [NSString stringWithFormat:@"%@ %@",
+                                fare.returnFlight.arrivalAirport, fare.returnFlight.arrivalTime];
+    cell.outDepAirportTimeLabel.text = outDepPortTime;
+    cell.outArrAirportTimeLabel.text = outArrPortTime;
+    cell.retDepAirportTimeLabel.text = retDepPortTime;
+    cell.retArrAirportTimeLabel.text = retArrPortTime;
     
     return cell;
 }

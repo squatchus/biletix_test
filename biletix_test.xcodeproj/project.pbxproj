@@ -21,6 +21,8 @@
 		B43B80141FA7C9030071AD06 /* BTXXmlFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B80131FA7C9030071AD06 /* BTXXmlFormatter.m */; };
 		B44112371FA87D2100F41444 /* BTXGetOptimalFaresParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B44112361FA87D2100F41444 /* BTXGetOptimalFaresParser.m */; };
 		B441123E1FA8B21E00F41444 /* BTXFareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */; };
+		B452B5F41FA8F0A8008F51C5 /* NSDate+stringValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B452B5F31FA8F0A8008F51C5 /* NSDate+stringValues.m */; };
+		B4C2A5611FA928F700CF89CB /* BTXAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A5601FA928F700CF89CB /* BTXAlertController.m */; };
 		B4DDE22C1FA7DE780017482E /* BTXApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE22B1FA7DE780017482E /* BTXApiConstants.m */; };
 		B4DDE22F1FA7E6A70017482E /* BTXStartSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE22E1FA7E6A70017482E /* BTXStartSessionRequest.m */; };
 		B4DDE2321FA7F4110017482E /* BTXHashGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DDE2311FA7F4110017482E /* BTXHashGenerator.m */; };
@@ -55,6 +57,10 @@
 		B44112381FA8A25C00F41444 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B441123C1FA8B21E00F41444 /* BTXFareTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXFareTableViewCell.h; sourceTree = "<group>"; };
 		B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXFareTableViewCell.m; sourceTree = "<group>"; };
+		B452B5F21FA8F0A8008F51C5 /* NSDate+stringValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+stringValues.h"; sourceTree = "<group>"; };
+		B452B5F31FA8F0A8008F51C5 /* NSDate+stringValues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+stringValues.m"; sourceTree = "<group>"; };
+		B4C2A55F1FA928F700CF89CB /* BTXAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXAlertController.h; sourceTree = "<group>"; };
+		B4C2A5601FA928F700CF89CB /* BTXAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXAlertController.m; sourceTree = "<group>"; };
 		B4DDE22B1FA7DE780017482E /* BTXApiConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXApiConstants.m; sourceTree = "<group>"; };
 		B4DDE22D1FA7E6A70017482E /* BTXStartSessionRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTXStartSessionRequest.h; sourceTree = "<group>"; };
 		B4DDE22E1FA7E6A70017482E /* BTXStartSessionRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTXStartSessionRequest.m; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				B43B80191FA7D6300071AD06 /* Controller */,
 				B43B80171FA7D5B00071AD06 /* NetworkServices */,
 				B43B80151FA7C90D0071AD06 /* Helpers */,
+				B452B5F51FA90144008F51C5 /* Categories */,
 				B43B80181FA7D61C0071AD06 /* SupportingFiles */,
 			);
 			path = biletix_test;
@@ -134,6 +141,8 @@
 				B43B80131FA7C9030071AD06 /* BTXXmlFormatter.m */,
 				B4DDE2301FA7F4110017482E /* BTXHashGenerator.h */,
 				B4DDE2311FA7F4110017482E /* BTXHashGenerator.m */,
+				B4C2A55F1FA928F700CF89CB /* BTXAlertController.h */,
+				B4C2A5601FA928F700CF89CB /* BTXAlertController.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -198,6 +207,15 @@
 				B441123D1FA8B21E00F41444 /* BTXFareTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B452B5F51FA90144008F51C5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B452B5F21FA8F0A8008F51C5 /* NSDate+stringValues.h */,
+				B452B5F31FA8F0A8008F51C5 /* NSDate+stringValues.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +346,11 @@
 				B44112371FA87D2100F41444 /* BTXGetOptimalFaresParser.m in Sources */,
 				B43B800D1FA792E00071AD06 /* BTXFare.m in Sources */,
 				B43B80101FA7937F0071AD06 /* BTXFlight.m in Sources */,
+				B452B5F41FA8F0A8008F51C5 /* NSDate+stringValues.m in Sources */,
 				B4DDE2351FA7FBA20017482E /* BTXGetOptimalFaresRequest.m in Sources */,
 				B42B142B1FA3DCE60044E7E4 /* main.m in Sources */,
 				B4DDE22F1FA7E6A70017482E /* BTXStartSessionRequest.m in Sources */,
+				B4C2A5611FA928F700CF89CB /* BTXAlertController.m in Sources */,
 				B441123E1FA8B21E00F41444 /* BTXFareTableViewCell.m in Sources */,
 				B42B141D1FA3DCE60044E7E4 /* BTXAppDelegate.m in Sources */,
 				B43B80041FA782040071AD06 /* BTXSearchResultsTVC.m in Sources */,

@@ -14,6 +14,6 @@
 
 + (void)parseResponseDict:(nonnull NSDictionary *)dict
                   success:(nonnull void(^)(NSArray<BTXFare *>* _Nonnull fares))successBlock
-                  failure:(nonnull void(^)(NSString* _Nullable error))failureBlock;
+                  failure:(nonnull void(^)(NSString* _Nonnull error))failureBlock;
 
 @end

@@ -15,7 +15,7 @@
                                  hash:(nonnull NSString *)hash
                           disableHash:(BOOL)disable;
 
-- (void)postWithSuccess:(nonnull void(^)(NSString* _Nullable token))successBlock
-                failure:(nonnull void(^)(NSString* _Nullable error))failureBlock;
+- (void)postWithSuccess:(nonnull void(^)(NSString* _Nonnull token))successBlock
+                failure:(nonnull void(^)(NSString* _Nonnull error))failureBlock;
 
 @end

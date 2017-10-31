@@ -14,18 +14,14 @@ static NSString* const kActionName = @"m:GetOptimalFaresInput";
 
 // request params keys
 static NSString* const kTokenParamKey = @"m:session_token";
-static NSString *const kHashParamKey = @"m:hash";
-static NSString *const kDeparturePointParamKey = @"m:departure_point";
-static NSString *const kArrivalPointParamKey = @"m:arrival_point";
-static NSString *const kOutboundDateParamKey = @"m:outbound_date";
-static NSString *const kReturnDateParamKey = @"m:return_date";
-static NSString *const kOwrtParamKey = @"m:owrt";
-static NSString *const kAdultCountParamKey = @"m:adult_count";
-static NSString *const kDirectOnlyParamKey = @"m:direct_only";
-
-// response params keys
-static NSString *const kCurrencyResponseKeyPath = @"Body.GetOptimalFaresOutput.currency";
-
+static NSString* const kHashParamKey = @"m:hash";
+static NSString* const kDeparturePointParamKey = @"m:departure_point";
+static NSString* const kArrivalPointParamKey = @"m:arrival_point";
+static NSString* const kOutboundDateParamKey = @"m:outbound_date";
+static NSString* const kReturnDateParamKey = @"m:return_date";
+static NSString* const kOwrtParamKey = @"m:owrt";
+static NSString* const kAdultCountParamKey = @"m:adult_count";
+static NSString* const kDirectOnlyParamKey = @"m:direct_only";
 
 @implementation BTXGetOptimalFaresRequest
 
@@ -39,6 +35,7 @@ static NSString *const kCurrencyResponseKeyPath = @"Body.GetOptimalFaresOutput.c
     if (self = [super init]) {
         super.responseHeader = YES;
         super.actionAttributes = @{@"xmlns:m" : @"http://www.tais.ru/"};
+        
         NSDictionary *params = @{ kTokenParamKey: token,
                                   kOwrtParamKey: (returnDate ? @"RT" : @""),
                                   kDeparturePointParamKey: departurePoint,
@@ -48,6 +45,7 @@ static NSString *const kCurrencyResponseKeyPath = @"Body.GetOptimalFaresOutput.c
                                   kAdultCountParamKey: adultCount,
                                   kDirectOnlyParamKey: @"Y",
                                   kHashParamKey: hash };
+        
         [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { [super setValue:obj forKey:key]; }];
         return self;
     }
@@ -59,9 +57,15 @@ static NSString *const kCurrencyResponseKeyPath = @"Body.GetOptimalFaresOutput.c
     NSString *url = BTXApiURL;
     [super requestURL:url soapAction:kActionName completeWithDictionary:^(NSInteger statusCode, NSDictionary *dict) {
         [BTXGetOptimalFaresParser parseResponseDict:dict success:^(NSArray<BTXFare *> * _Nonnull fares) {
-            if (statusCode == BTXApiSuccessCode && fares) successBlock(fares);
-            else if (!fares) failureBlock(BTXErrorParsingFailed);
-            else failureBlock(BTXErrorFailedByStatusCode);
+            if (statusCode == BTXApiSuccessCode && fares) {
+                successBlock(fares);
+            }
+            else if (!fares) {
+                failureBlock(BTXErrorParsingFailed);
+            }
+            else {
+                failureBlock(BTXErrorFailedByStatusCode);
+            }
         } failure:^(NSString * _Nullable error) {
             failureBlock(error);
         }];

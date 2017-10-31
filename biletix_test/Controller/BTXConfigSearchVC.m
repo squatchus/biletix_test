@@ -8,7 +8,13 @@
 
 #import "BTXConfigSearchVC.h"
 #import "BTXApiClient.h"
+#import "BTXApiConstants.h"
 #import "BTXSearchResultsTVC.h"
+#import "BTXAlertController.h"
+#import "NSDate+stringValues.h"
+
+NSString* const kDefaultLogin = @"";
+NSString* const kDefaultPassword = @"";
 
 @interface BTXConfigSearchVC () <UITextFieldDelegate>
 
@@ -39,48 +45,48 @@
     self.defaultBlueColor = [self.returnButton titleColorForState:UIControlStateNormal];
     
     self.apiClient = [BTXApiClient new];
-    [self.apiClient startSessionWithLogin:@"" password:@"" completion:^(NSString *error) {
-        if (error) NSLog(@"Error (can't start session): %@", error);
+    [self.apiClient startSessionWithLogin:kDefaultLogin password:kDefaultPassword completion:^(NSString *error) {
+        if (error) {
+            BTXAlertController *alert = [BTXAlertController alertWithTitle:@"Search" message:error cancelTitle:@"Ok"];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }];
 }
 
 - (IBAction)onOutboundButtonPressed:(UIButton *)sender {
-    [self.fromTextField resignFirstResponder];
-    [self.toTextField resignFirstResponder];
+    [self.fromTextField endEditing:YES];
+    [self.toTextField endEditing:YES];
     self.datePickerButton = self.outboundButton;
     [self.outboundButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self.returnButton setTitleColor:self.defaultBlueColor forState:UIControlStateNormal];
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    [self.datePicker setDate:[formatter dateFromString:self.outboundButton.titleLabel.text]];
+    [self.datePicker setDate:[NSDate dateFromString:self.outboundButton.titleLabel.text]];
 }
 
 - (IBAction)onReturnButtonPressed:(UIButton *)sender {
-    [self.fromTextField resignFirstResponder];
-    [self.toTextField resignFirstResponder];
+    [self.fromTextField endEditing:YES];
+    [self.toTextField endEditing:YES];
     self.datePickerButton = self.returnButton;
     [self.returnButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self.outboundButton setTitleColor:self.defaultBlueColor forState:UIControlStateNormal];
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    [self.datePicker setDate:[formatter dateFromString:self.returnButton.titleLabel.text]];
+    [self.datePicker setDate:[NSDate dateFromString:self.returnButton.titleLabel.text]];
 }
 
 - (IBAction)onDatePickerValueChanged:(UIDatePicker *)sender {
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    NSString *date = [formatter stringFromDate:[sender date]];
-    [self.datePickerButton setTitle:date forState:UIControlStateNormal];
+    [self.datePickerButton setTitle:[sender.date dateString] forState:UIControlStateNormal];
 }
 
 - (IBAction)onSearchButtonPressed:(UIButton *)sender {
     [self.activityIndicator startAnimating];
     NSString *departurePoint = self.fromTextField.text;
-    if (departurePoint.length == 0) departurePoint = self.fromTextField.placeholder;
+    if (departurePoint.length == 0) {
+        departurePoint = self.fromTextField.placeholder;
+    }
     NSString *arrivalPoint = self.toTextField.text;
-    if (arrivalPoint.length == 0) arrivalPoint = self.toTextField.placeholder;
+    if (arrivalPoint.length == 0) {
+        arrivalPoint = self.toTextField.placeholder;
+    }
     
-    [self.apiClient searchForOptimalFaresFrom:departurePoint
+    [self.apiClient getOptimalFaresFrom:departurePoint
                                            to:arrivalPoint
                                            on:self.outboundButton.titleLabel.text
                                      returnOn:self.returnButton.titleLabel.text
@@ -88,12 +94,9 @@
                                    completion:^(NSArray<BTXFare *> * _Nullable fares, NSString * _Nullable error) {
         [self.activityIndicator stopAnimating];
         if (error) {
-            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Search" message:error preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
-            [alert addAction:okButton];
+            BTXAlertController *alert = [BTXAlertController alertWithTitle:@"Search" message:error cancelTitle:@"Ok"];
             [self presentViewController:alert animated:YES completion:nil];
-        }
-        else {
+        } else {
             BTXSearchResultsTVC *results = [BTXSearchResultsTVC controllerWithFares:fares];
             [self.navigationController pushViewController:results animated:YES];
         }
@@ -104,8 +107,5 @@
     [textField resignFirstResponder];
     return NO;
 }
-
-
-
 
 @end

@@ -10,6 +10,5 @@
 
 @interface BTXConfigSearchVC : UIViewController
 
-
 @end
 

@@ -19,6 +19,9 @@
 @property (strong, nonatomic, readonly, nonnull) NSString *arrivalAirport;
 @property (strong, nonatomic, readonly, nonnull) NSString *linkSuffix;
 
+/*! @abstract Use initWithNumber:... to init BTXFlight. */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 - (nonnull instancetype)initWithNumber:(nonnull NSString *)flightNumber
                          departureDate:(nonnull NSString *)departureDate
                          departureTime:(nonnull NSString *)departureTime
@@ -26,7 +29,7 @@
                            arrivalDate:(nonnull NSString *)arrivalDate
                            arrivalTime:(nonnull NSString *)arrivalTime
                         arrivalAirport:(nonnull NSString *)arrivalAirport
-                                  link:(nonnull NSString *)link;
+                                  link:(nonnull NSString *)link NS_DESIGNATED_INITIALIZER;
 
 
 

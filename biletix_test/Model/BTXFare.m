@@ -14,11 +14,11 @@
                              currency:(nonnull NSString *)currency
                                  link:(nonnull NSString *)link
                        outboundFlight:(nonnull BTXFlight *)outboundFlight
-                         returnFlight:(nonnull BTXFlight *)returnFlight {
+                         returnFlight:(nullable BTXFlight *)returnFlight {
     if (self = [super init]) {
-        _price = price;
-        _currency = currency;
-        _link = link;
+        _price = [NSDecimalNumber decimalNumberWithDecimal:[price decimalValue]];
+        _currency = [currency copy];
+        _link = [link copy];
         _outboundFlight = outboundFlight;
         _returnFlight = returnFlight;
         return self;
