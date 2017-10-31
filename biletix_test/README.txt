@@ -6,7 +6,7 @@ https://docs.google.com/document/d/1QkXNfz-setvkWGEXwon9v1Yc_4aXWceshC0aU5osmrg/
 Документация к заданию:
 https://docs.google.com/document/d/1Icz7tLWbpYlfARzA70mgMSNm9cGaj1fT-4llxhblu0A/edit?usp=sharing
 
-Проект использует триальную версию библиотеки SOAPEngine - наиболее поддерживаемой библиотеки для работы с SOAP API. Триальная версия поддерживает только работу на симуляторе. Для каждого запроса, в приложении создаётся отдельный инстанс SOAPEngine. Подобная практика является рекомендуемой и описана разработчиками библиотеки на GitHub. Библиотека пишет в консоль несколько ворнингов:
+Проект использует триальную версию библиотеки SOAPEngine - наиболее поддерживаемой библиотеки для работы с SOAP API на Objective-C. Триальная версия поддерживает только работу на симуляторе. Для каждого запроса, в приложении создаётся отдельный инстанс SOAPEngine. Подобная практика является рекомендуемой и описана разработчиками библиотеки на GitHub. Библиотека пишет в консоль несколько ворнингов:
     1) SOAPEngine missing Content-Length in the header of the HTTP response or its value is equal zero!
     2) Warning! NSProgress not work without Content-Length.
     Они вызваны отсуствием соответствующего заголовка в ответах API.
