@@ -29,7 +29,7 @@ NSString* const kTestCredentials = @"[partner]||SOAPTEST";
 
 - (void)startSessionWithLogin:(nonnull NSString *)login
                      password:(nonnull NSString *)password
-                   completion:(void(^)(NSString *error))handler {
+                   completion:(nonnull void(^)(NSString *error))handler {
     self.login = login;
     self.password = password;
     NSString *hash = [BTXHashGenerator md5HashWithArray:@[login, password, kSecret]];
@@ -46,11 +46,16 @@ NSString* const kTestCredentials = @"[partner]||SOAPTEST";
     self.startSessionRequest = [[BTXStartSessionRequest alloc] initWithLogin:login password:password hash:hash disableHash:YES];
     self.startSessionRequest.delegate = self;
     
+    __weak typeof(self) weakSelf = self;
     [self.startSessionRequest postWithSuccess:^(NSString * _Nullable token) {
-        self.sessionToken = token;
-        handler(nil);
+        if (weakSelf) {
+            weakSelf.sessionToken = token;
+            handler(nil);
+        }
     } failure:^(NSString * _Nullable error) {
-        handler(error);
+        if (weakSelf) {
+            handler(error);
+        }
     }];
 }
 
@@ -70,10 +75,15 @@ NSString* const kTestCredentials = @"[partner]||SOAPTEST";
     self.getOptimalFaresRequest = [[BTXGetOptimalFaresRequest alloc] initWithToken:self.sessionToken hash:hash from:departurePoint to:arrivalPoint outboundOn:outboundDate returnOn:returnDate adultCount:adultCount];
     self.getOptimalFaresRequest.delegate = self;
     
+    __weak typeof(self) weakSelf = self;
     [self.getOptimalFaresRequest postWithSuccess:^(NSArray<BTXFare *> * _Nonnull fares) {
-        handler(fares, nil);
+        if (weakSelf) {
+            handler(fares, nil);
+        }
     } failure:^(NSString * _Nullable error) {
-        handler(nil, error);
+        if (weakSelf) {
+            handler(nil, error);
+        }
     }];
 }
 

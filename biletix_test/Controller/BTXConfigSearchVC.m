@@ -13,6 +13,8 @@
 #import "BTXAlertController.h"
 #import "NSDate+stringValues.h"
 
+#import <SOAPEngine64/SOAPEngine.h>
+
 NSString* const kDefaultLogin = @"";
 NSString* const kDefaultPassword = @"";
 
@@ -27,8 +29,7 @@ NSString* const kDefaultPassword = @"";
 @property (weak, nonatomic) UIButton *datePickerButton;
 @property (strong, nonatomic) UIColor *defaultBlueColor;
 
-@property (nonatomic, strong, nonnull) BTXApiClient *apiClient;
-
+@property (strong, nonatomic, nonnull) BTXApiClient *apiClient;
 
 - (IBAction)onSearchButtonPressed:(UIButton *)sender;
 - (IBAction)onDatePickerValueChanged:(UIDatePicker *)sender;
@@ -45,10 +46,12 @@ NSString* const kDefaultPassword = @"";
     self.defaultBlueColor = [self.returnButton titleColorForState:UIControlStateNormal];
     
     self.apiClient = [BTXApiClient new];
+    
+    __weak BTXConfigSearchVC *weakSelf = self;
     [self.apiClient startSessionWithLogin:kDefaultLogin password:kDefaultPassword completion:^(NSString *error) {
-        if (error) {
+        if (weakSelf && error) {
             BTXAlertController *alert = [BTXAlertController alertWithTitle:@"Search" message:error cancelTitle:@"Ok"];
-            [self presentViewController:alert animated:YES completion:nil];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
         }
     }];
 }
@@ -86,19 +89,21 @@ NSString* const kDefaultPassword = @"";
         arrivalPoint = self.toTextField.placeholder;
     }
     
+    __weak BTXConfigSearchVC *weakSelf = self;
+    
     [self.apiClient getOptimalFaresFrom:departurePoint
                                            to:arrivalPoint
                                            on:self.outboundButton.titleLabel.text
                                      returnOn:self.returnButton.titleLabel.text
                                    adultCount:@(1)
                                    completion:^(NSArray<BTXFare *> * _Nullable fares, NSString * _Nullable error) {
-        [self.activityIndicator stopAnimating];
+        [weakSelf.activityIndicator stopAnimating];
         if (error) {
             BTXAlertController *alert = [BTXAlertController alertWithTitle:@"Search" message:error cancelTitle:@"Ok"];
-            [self presentViewController:alert animated:YES completion:nil];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
         } else {
             BTXSearchResultsTVC *results = [BTXSearchResultsTVC controllerWithFares:fares];
-            [self.navigationController pushViewController:results animated:YES];
+            [weakSelf.navigationController pushViewController:results animated:YES];
         }
     }];
 }
