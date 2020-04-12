@@ -1,1 +1,16 @@
-biletix_test.xcodeproj/xcuserdata/*
+# Mac OS X
+.DS_Store
+
+type.trainer.Tests/*.plist
+!type.trainer.Tests/Info.plist
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
