@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8BCABC55B4D0B939145286201E6D0527"
-               BuildableName = "libPods-biletix_test.a"
-               BlueprintName = "Pods-biletix_test"
+               BlueprintIdentifier = "8AE1FF9496A88FE4C1C3B213C9B531B5"
+               BuildableName = "SOAPEngine"
+               BlueprintName = "SOAPEngine"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

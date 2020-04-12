@@ -91,9 +91,23 @@ static NSString* const kErrorCodeOKValue = @"OK";
 
 + (BTXFlight *)flightFromDict:(NSDictionary *)dict {
     NSString *link = dict[kFlightLinkKey];
-    NSDictionary *flightInfo = [dict valueForKeyPath:kFlightInfoKeyPath];
+    id flightInfo = [dict valueForKeyPath:kFlightInfoKeyPath];
     
-    NSString *number = [NSString stringWithFormat:@"%@ %@", flightInfo[kFlightCarrierKey], flightInfo[kFlightNumberKey]];
+    NSString *number = @"";
+    if ([flightInfo isKindOfClass:NSDictionary.class])
+    {
+        number = [NSString stringWithFormat:@"%@ %@", flightInfo[kFlightCarrierKey], flightInfo[kFlightNumberKey]];
+    }
+    else if ([flightInfo isKindOfClass:NSArray.class])
+    {
+        NSMutableArray *flightNumbers = [NSMutableArray new];
+        for (NSDictionary *segmentInfo in flightInfo)
+        {
+            NSString *segmentNumber = [NSString stringWithFormat:@"%@ %@", segmentInfo[kFlightCarrierKey], segmentInfo[kFlightNumberKey]];
+            [flightNumbers addObject:segmentNumber];
+        }
+        number = [flightNumbers componentsJoinedByString:@"+"];
+    }
     
     NSString *depAirport = flightInfo[kDepartureAirportKey];
     NSString *arrAirport = flightInfo[kArrivalAirportKey];

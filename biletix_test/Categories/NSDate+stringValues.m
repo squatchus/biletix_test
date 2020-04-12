@@ -8,6 +8,8 @@
 
 #import "NSDate+stringValues.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSDate (StringValues)
 
 + (NSDateFormatter *)formatterWithFormat:(NSString *)string {
@@ -16,21 +18,37 @@
     return formatter;
 }
 
-+ (nonnull NSDate *)dateFromString:(nonnull NSString *)dateString {
++ (NSDate *)oneWeekFromNow {
+    NSDate *now = NSDate.date;
+    NSTimeInterval week = 60*60*24*7;
+    return [now dateByAddingTimeInterval:week];
+}
+
++ (NSDate *)twoWeeksFromNow {
+    NSDate *now = NSDate.date;
+    NSTimeInterval week = 60*60*24*7;
+    return [now dateByAddingTimeInterval:(week*2)];
+}
+
++ (NSDate *)dateFromString:(NSString *)dateString {
     return [[NSDate formatterWithFormat:@"dd.MM.yyyy"] dateFromString:dateString];
 }
 
 // returns string of format @"HH-mm"
-- (nonnull NSString *)timeString {
+- (NSString *)timeString {
     return [[NSDate formatterWithFormat:@"HH-mm"] stringFromDate:self];
 }
+
 // returns string of format @"dd.MM.yyyy"
-- (nonnull NSString *)dateString {
+- (NSString *)dateString {
     return [[NSDate formatterWithFormat:@"dd.MM.yyyy"] stringFromDate:self];
 }
+
 // returns string of format @"dd.MM.yyyy HH-mm"
-- (nonnull NSString *)dateTimeString {
+- (NSString *)dateTimeString {
     return [[NSDate formatterWithFormat:@"dd.MM.yyyy HH-mm"] stringFromDate:self];
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

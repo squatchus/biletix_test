@@ -1,12 +1,12 @@
 **SOAPEngine**
 ================
 
-[![Twitter: @DaniloPriore](https://img.shields.io/badge/contact-@DaniloPriore-blue.svg?style=flat)](https://twitter.com/DaniloPriore)
 [![Version](https://img.shields.io/cocoapods/v/SOAPEngine.svg?style=flat)](http://cocoapods.org/pods/SOAPEngine)
-[![Language](https://img.shields.io/badge/language-objectivec-orange.svg?style=flat)]()
-[![Platform](https://img.shields.io/cocoapods/p/SOAPEngine.svg?style=flat)](http://cocoapods.org/pods/SOAPEngine)
+[![Language](https://img.shields.io/badge/languages-Swift%20%7C%20ObjC-red.svg)]()
+[![Platform](https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20macOS-red.svg)](http://cocoapods.org/pods/SOAPEngine)
 [![License](https://img.shields.io/cocoapods/l/SOAPEngine.svg?style=flat)](http://cocoapods.org/pods/SOAPEngine)
-
+[![codebeat badge](https://codebeat.co/badges/106e60ae-9f4c-4970-a505-770beb429605)](https://codebeat.co/projects/github-com-priore-soapengine-master)
+[![Twitter: @DaniloPriore](https://img.shields.io/badge/contact-@DaniloPriore-blue.svg?style=flat)](https://twitter.com/DaniloPriore)
 
 This generic [SOAP](http://www.wikipedia.org/wiki/SOAP) client allows you to access web services using a your [iOS](http://www.wikipedia.org/wiki/IOS) app, [Mac OS X](http://www.wikipedia.org/wiki/OS_X) app and [Apple TV](http://www.apple.com/tv/) app.
 
@@ -57,6 +57,30 @@ With this Framework you can create [iPhone](http://www.wikipedia.org/wiki/IPhone
 ---
 * for [WCF](http://www.wikipedia.org/wiki/Windows_Communication_Foundation) services, only supports basic http bindings ([basicHttpBinding](https://msdn.microsoft.com/library/ms731361.aspx)).
 * in [Mac OS X](http://www.wikipedia.org/wiki/OS_X) unsupported image objects, instead you can use the [NSData](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html).
+
+## Known issues
+---
+- **Swift 4**: the library is currently written in Objective-C and when you import the swift library you will get build errors like this `The use of Swift 3 @objc inference in Swift 4 mode is deprecated`.
+
+	For silent this warning is need sets `Swift 3 @objc Inference` to default value in the the Build settings of target. __but It's not all__; the classes used to create requests must be declared with `@objcMembers` and `NSObject`, eg:
+
+	``` swift
+	class MyClass { ... }
+
+    let param = MyClass()
+    // ...
+    // ...
+    let soap = SOAPEngine()
+    soap.setValue(param, forKey: "myKey")
+    // ...
+    // ...
+	```
+
+	the declaration of MyClass must become :
+
+	``` swift
+	@objcMembers class MyClass: NSObject { ... }
+	```
 
 ## Security for Xcode 8.x or later
 ---
@@ -505,11 +529,11 @@ Read the [Integrating SOAPEngine with a Swift project](https://github.com/priore
 Read the ["Standard Installation" guide](https://github.com/priore/SOAPEngine/wiki/Standard-Installation)
 
 ## Licenses
+
 ---
 Trial (simulator) | Single App | Enterprise (multi App)
 ------------- | ------------- | -------------
 [![TRIAL LICENSE](https://github.com/priore/SOAPEngine/raw/master/screen/freetrial.png)](https://github.com/priore/SOAPEngine/archive/master.zip)  | [![BUY SINGLE LICENSE](https://github.com/priore/SOAPEngine/raw/master/screen/1299.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G3RXTN3YD7VRG) | [![BUY ENTERPRISE LICENSE](https://github.com/priore/SOAPEngine/raw/master/screen/7799.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6YH9LJRNXPTHE)
-
 
 ## Contacts
 ---

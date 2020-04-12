@@ -41,7 +41,10 @@ NSString* const kDefaultPassword = @"";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.datePicker.minimumDate = [NSDate date];
+    self.datePicker.minimumDate = NSDate.oneWeekFromNow;
+    [self.outboundButton setTitle:NSDate.oneWeekFromNow.dateString forState:UIControlStateNormal];
+    [self.returnButton setTitle:NSDate.twoWeeksFromNow.dateString forState:UIControlStateNormal];
+    
     self.datePickerButton = self.outboundButton;
     self.defaultBlueColor = [self.returnButton titleColorForState:UIControlStateNormal];
     
@@ -55,6 +58,13 @@ NSString* const kDefaultPassword = @"";
         }
     }];
 }
+
+- (IBAction)onSwapFromTo:(id)sender {
+    NSString *from = self.fromTextField.text;
+    self.fromTextField.text = self.toTextField.text;
+    self.toTextField.text = from;
+}
+
 
 - (IBAction)onOutboundButtonPressed:(UIButton *)sender {
     [self.fromTextField endEditing:YES];

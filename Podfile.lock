@@ -1,12 +1,16 @@
 PODS:
-  - SOAPEngine (1.40.5)
+  - SOAPEngine (1.43)
 
 DEPENDENCIES:
   - SOAPEngine
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SOAPEngine
+
 SPEC CHECKSUMS:
-  SOAPEngine: 2270f08a94fe2ee5f89922b5232f68f4d4a7ee03
+  SOAPEngine: 4c6da25535c74150dde84c97e36edc55131a5e8f
 
-PODFILE CHECKSUM: 1f12b35d34fda7ab2bd30cc96bd9189d8db9c410
+PODFILE CHECKSUM: c0f029fcc7fcefee41e55f993fd5ff866d45aaf2
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.8.3

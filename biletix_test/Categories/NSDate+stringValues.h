@@ -8,16 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSDate (StringValues)
 
 // returns date from string of format @"dd.MM.yyyy"
-+ (nonnull NSDate *)dateFromString:(nonnull NSString *)dateString;
++ (NSDate *)dateFromString:(NSString *)dateString;
+
++ (NSDate *)oneWeekFromNow;
++ (NSDate *)twoWeeksFromNow;
 
 // returns string of format @"HH-mm"
-- (nonnull NSString *)timeString;
+- (NSString *)timeString;
 // returns string of format @"dd.MM.yyyy"
-- (nonnull NSString *)dateString;
+- (NSString *)dateString;
 // returns string of format @"dd.MM.yyyy HH-mm"
-- (nonnull NSString *)dateTimeString;
+- (NSString *)dateTimeString;
 
 @end
+
+NS_ASSUME_NONNULL_END

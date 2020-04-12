@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '7.1'
+platform :ios, '11.0'
 inhibit_all_warnings!
 
 target 'biletix_test' do
