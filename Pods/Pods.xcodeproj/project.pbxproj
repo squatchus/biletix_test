@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -20,11 +20,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0392BE05253810484C999724876BB0AE /* Pods-biletix_test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E0C9B9B88729F43DB7214C9C8AD1B8 /* Pods-biletix_test-dummy.m */; };
+		19D2DA9498C7411300106AF696B4A2BB /* Pods-biletix_swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F08C4F2F92B4F3A38E5A6ACAB7554030 /* Pods-biletix_swift-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		08555D6AF9728AA2179C4CD071D5F314 /* PBXContainerItemProxy */ = {
+		1C71F29383364E4C00EE52CA7E4CF9E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -34,20 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04FE74B503BA010B6D4F107EFC856167 /* Pods-biletix_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-biletix_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		06B298C6A741E89760C173136041E654 /* SOAPEngine.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SOAPEngine.xcconfig; sourceTree = "<group>"; };
-		41D6667F33F154E3699B99373FE6A508 /* Pods-biletix_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-biletix_test.release.xcconfig"; sourceTree = "<group>"; };
-		58734D49838598DC248E1D47178EB528 /* Pods-biletix_test-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-biletix_test-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8D27E04EEE45334086BFA2AF042FB5FD /* Pods-biletix_test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-biletix_test-acknowledgements.plist"; sourceTree = "<group>"; };
+		175707D8838A23225413E26BDECB04C2 /* Pods-biletix_swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-biletix_swift-acknowledgements.plist"; sourceTree = "<group>"; };
+		5BAC8D44412D5EC49571CB29A28BD520 /* Pods-biletix_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-biletix_swift.release.xcconfig"; sourceTree = "<group>"; };
+		7CD53F207D898B90094173D81AC325F7 /* libPods-biletix_swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-biletix_swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB2599CEF3B17A0B0AAF119FCF0001D /* Pods-biletix_swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-biletix_swift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F49EA43A60987FA7EF93279AACBCAA9 /* libPods-biletix_test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-biletix_test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4E0C9B9B88729F43DB7214C9C8AD1B8 /* Pods-biletix_test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-biletix_test-dummy.m"; sourceTree = "<group>"; };
-		C1176BEAB06B5663C3ED937C3499A143 /* Pods-biletix_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-biletix_test.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F95C2F15305278AA7AA02690385AE2 /* SOAPEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOAPEngine.h; path = SOAPEngine64.framework/Headers/SOAPEngine.h; sourceTree = "<group>"; };
 		D45F15C698C35957531BF82B13F97585 /* SOAPEngine64.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SOAPEngine64.framework; sourceTree = "<group>"; };
+		F08C4F2F92B4F3A38E5A6ACAB7554030 /* Pods-biletix_swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-biletix_swift-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C36E6E599D2ACD0C1EDB47F7F513D727 /* Frameworks */ = {
+		00792BC436C6FBBD8C5D948BC64261C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,12 +65,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6322804C664F0983F02721201874012E /* Targets Support Files */ = {
+		6B71B27820C6E793B44F5BACE5014433 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				97CFD74C1A1ACFFACACD7B38A452EB51 /* Pods-biletix_test */,
+				F4ED0CA943DAFE083382B1D9B63DFC38 /* Pods-biletix_swift */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		73F3DB6C1715DC92734B8ADA78CAB6E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CD53F207D898B90094173D81AC325F7 /* libPods-biletix_swift.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		88FEA310F43E952D9F5647AB41B0DDBA /* Pods */ = {
@@ -79,19 +87,6 @@
 				CC8874CB9CD7278080CBB3530FD3AEAC /* SOAPEngine */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		97CFD74C1A1ACFFACACD7B38A452EB51 /* Pods-biletix_test */ = {
-			isa = PBXGroup;
-			children = (
-				58734D49838598DC248E1D47178EB528 /* Pods-biletix_test-acknowledgements.markdown */,
-				8D27E04EEE45334086BFA2AF042FB5FD /* Pods-biletix_test-acknowledgements.plist */,
-				A4E0C9B9B88729F43DB7214C9C8AD1B8 /* Pods-biletix_test-dummy.m */,
-				C1176BEAB06B5663C3ED937C3499A143 /* Pods-biletix_test.debug.xcconfig */,
-				41D6667F33F154E3699B99373FE6A508 /* Pods-biletix_test.release.xcconfig */,
-			);
-			name = "Pods-biletix_test";
-			path = "Target Support Files/Pods-biletix_test";
 			sourceTree = "<group>";
 		};
 		CC8874CB9CD7278080CBB3530FD3AEAC /* SOAPEngine */ = {
@@ -110,8 +105,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				88FEA310F43E952D9F5647AB41B0DDBA /* Pods */,
-				FFC2535DE8451978DC318D95D268621F /* Products */,
-				6322804C664F0983F02721201874012E /* Targets Support Files */,
+				73F3DB6C1715DC92734B8ADA78CAB6E6 /* Products */,
+				6B71B27820C6E793B44F5BACE5014433 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,18 +126,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FFC2535DE8451978DC318D95D268621F /* Products */ = {
+		F4ED0CA943DAFE083382B1D9B63DFC38 /* Pods-biletix_swift */ = {
 			isa = PBXGroup;
 			children = (
-				9F49EA43A60987FA7EF93279AACBCAA9 /* libPods-biletix_test.a */,
+				8EB2599CEF3B17A0B0AAF119FCF0001D /* Pods-biletix_swift-acknowledgements.markdown */,
+				175707D8838A23225413E26BDECB04C2 /* Pods-biletix_swift-acknowledgements.plist */,
+				F08C4F2F92B4F3A38E5A6ACAB7554030 /* Pods-biletix_swift-dummy.m */,
+				04FE74B503BA010B6D4F107EFC856167 /* Pods-biletix_swift.debug.xcconfig */,
+				5BAC8D44412D5EC49571CB29A28BD520 /* Pods-biletix_swift.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-biletix_swift";
+			path = "Target Support Files/Pods-biletix_swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		42BEA4DB5BB34C1BE829EABC04221E48 /* Headers */ = {
+		4E3879A41E93B5382B799AE51382AAC6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,22 +152,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8BCABC55B4D0B939145286201E6D0527 /* Pods-biletix_test */ = {
+		9184EBD660D1CAF2C8AD1128490EEDC4 /* Pods-biletix_swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 860A3FD230651D4B0F7459D4936E65B1 /* Build configuration list for PBXNativeTarget "Pods-biletix_test" */;
+			buildConfigurationList = 4979C40631D477D7574C464F047D3A7C /* Build configuration list for PBXNativeTarget "Pods-biletix_swift" */;
 			buildPhases = (
-				42BEA4DB5BB34C1BE829EABC04221E48 /* Headers */,
-				26600D4B730B192CCA65B85BC5B709D2 /* Sources */,
-				C36E6E599D2ACD0C1EDB47F7F513D727 /* Frameworks */,
+				4E3879A41E93B5382B799AE51382AAC6 /* Headers */,
+				A7392140428258E545B7FC12278131CC /* Sources */,
+				00792BC436C6FBBD8C5D948BC64261C1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DBE844A5F9998CD338C774255E70B957 /* PBXTargetDependency */,
+				BCA0380D2100DD118119B9B48E7BEF8B /* PBXTargetDependency */,
 			);
-			name = "Pods-biletix_test";
-			productName = "Pods-biletix_test";
-			productReference = 9F49EA43A60987FA7EF93279AACBCAA9 /* libPods-biletix_test.a */;
+			name = "Pods-biletix_swift";
+			productName = "Pods-biletix_swift";
+			productReference = 7CD53F207D898B90094173D81AC325F7 /* libPods-biletix_swift.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -180,47 +180,47 @@
 				LastUpgradeCheck = 1140;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = FFC2535DE8451978DC318D95D268621F /* Products */;
+			productRefGroup = 73F3DB6C1715DC92734B8ADA78CAB6E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BCABC55B4D0B939145286201E6D0527 /* Pods-biletix_test */,
+				9184EBD660D1CAF2C8AD1128490EEDC4 /* Pods-biletix_swift */,
 				8AE1FF9496A88FE4C1C3B213C9B531B5 /* SOAPEngine */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26600D4B730B192CCA65B85BC5B709D2 /* Sources */ = {
+		A7392140428258E545B7FC12278131CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0392BE05253810484C999724876BB0AE /* Pods-biletix_test-dummy.m in Sources */,
+				19D2DA9498C7411300106AF696B4A2BB /* Pods-biletix_swift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DBE844A5F9998CD338C774255E70B957 /* PBXTargetDependency */ = {
+		BCA0380D2100DD118119B9B48E7BEF8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SOAPEngine;
 			target = 8AE1FF9496A88FE4C1C3B213C9B531B5 /* SOAPEngine */;
-			targetProxy = 08555D6AF9728AA2179C4CD071D5F314 /* PBXContainerItemProxy */;
+			targetProxy = 1C71F29383364E4C00EE52CA7E4CF9E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07C5C495B75A768E7CE838C782714F6D /* Debug */ = {
+		02FAFAB64EBAC14A725F0B607FA49F3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1176BEAB06B5663C3ED937C3499A143 /* Pods-biletix_test.debug.xcconfig */;
+			baseConfigurationReference = 5BAC8D44412D5EC49571CB29A28BD520 /* Pods-biletix_swift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -237,8 +237,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -293,15 +294,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		2DC6EE7F175F4D5AEE4F7A772AC79139 /* Release */ = {
+		741E3BC6516EED4C6D7EA7D8E96ADFA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41D6667F33F154E3699B99373FE6A508 /* Pods-biletix_test.release.xcconfig */;
+			baseConfigurationReference = 04FE74B503BA010B6D4F107EFC856167 /* Pods-biletix_swift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -318,36 +320,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BAD02B5A56747135CA2098F2E7799BD3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B298C6A741E89760C173136041E654 /* SOAPEngine.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		C37C0778FFE0F863B79ACF03823DF59B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B298C6A741E89760C173136041E654 /* SOAPEngine.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -413,6 +387,39 @@
 			};
 			name = Debug;
 		};
+		F0D3B194215F90D23F8640F3F8E94F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B298C6A741E89760C173136041E654 /* SOAPEngine.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA642CCA0C0052A86BDD4AB2FC442338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B298C6A741E89760C173136041E654 /* SOAPEngine.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,11 +432,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		860A3FD230651D4B0F7459D4936E65B1 /* Build configuration list for PBXNativeTarget "Pods-biletix_test" */ = {
+		4979C40631D477D7574C464F047D3A7C /* Build configuration list for PBXNativeTarget "Pods-biletix_swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				07C5C495B75A768E7CE838C782714F6D /* Debug */,
-				2DC6EE7F175F4D5AEE4F7A772AC79139 /* Release */,
+				741E3BC6516EED4C6D7EA7D8E96ADFA5 /* Debug */,
+				02FAFAB64EBAC14A725F0B607FA49F3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -437,8 +444,8 @@
 		8699BD691A94701D81C0335EEBE6A8CB /* Build configuration list for PBXAggregateTarget "SOAPEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAD02B5A56747135CA2098F2E7799BD3 /* Debug */,
-				C37C0778FFE0F863B79ACF03823DF59B /* Release */,
+				FA642CCA0C0052A86BDD4AB2FC442338 /* Debug */,
+				F0D3B194215F90D23F8640F3F8E94F82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		309A1B0D3D596EB689FACE6C /* libPods-biletix_swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D992703E76462A43D0DD8F19 /* libPods-biletix_swift.a */; };
+		B458AE752442336A00D60597 /* TestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458AE742442336A00D60597 /* TestAPIClient.swift */; };
+		B458AE7724424AAD00D60597 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458AE7624424AAD00D60597 /* APIErrors.swift */; };
+		B45A45BF24427809003C8248 /* GetTokenResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A45BE24427809003C8248 /* GetTokenResponseParser.swift */; };
+		B45A45C124427AE5003C8248 /* GetFaresResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A45C024427AE5003C8248 /* GetFaresResponseParser.swift */; };
+		B45A45C3244288AB003C8248 /* APITask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A45C2244288AB003C8248 /* APITask.swift */; };
+		B45A45C724428FE6003C8248 /* BTXXmlFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B45A45C624428FE6003C8248 /* BTXXmlFormatter.m */; };
+		B46789C7243E5DBB00BA3B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789C6243E5DBB00BA3B60 /* AppDelegate.swift */; };
+		B46789CB243E5DBB00BA3B60 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789CA243E5DBB00BA3B60 /* SearchFormViewController.swift */; };
+		B46789D3243E5DBE00BA3B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46789D2243E5DBE00BA3B60 /* Assets.xcassets */; };
+		B46789DF243E646800BA3B60 /* FaresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789DD243E646800BA3B60 /* FaresViewController.swift */; };
+		B46789E0243E646800BA3B60 /* FareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46789DE243E646800BA3B60 /* FareCell.xib */; };
+		B46789E2243E648500BA3B60 /* SearchFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46789E1243E648500BA3B60 /* SearchFormViewController.xib */; };
+		B46789EA243E668300BA3B60 /* Date+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789E9243E668300BA3B60 /* Date+Extra.swift */; };
+		B46789EC243E66DA00BA3B60 /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789EB243E66DA00BA3B60 /* String+Extra.swift */; };
+		B46789EE243E6E1B00BA3B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46789ED243E6E1B00BA3B60 /* LaunchScreen.storyboard */; };
+		B46789F0243E725500BA3B60 /* SearchFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789EF243E725500BA3B60 /* SearchFormInteractor.swift */; };
+		B46789F2243E728100BA3B60 /* SearchFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789F1243E728100BA3B60 /* SearchFormPresenter.swift */; };
+		B46789F4243E72DF00BA3B60 /* SearchFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789F3243E72DF00BA3B60 /* SearchFormBuilder.swift */; };
+		B46789F9243E78D800BA3B60 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789F8243E78D800BA3B60 /* Flight.swift */; };
+		B46789FB243E793A00BA3B60 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789FA243E793A00BA3B60 /* Fare.swift */; };
+		B4678A00243E7F7B00BA3B60 /* FareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46789FF243E7F7B00BA3B60 /* FareProvider.swift */; };
+		B4678A02243E818300BA3B60 /* FaresBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A01243E818300BA3B60 /* FaresBuilder.swift */; };
+		B4678A04243E83A000BA3B60 /* FaresInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A03243E83A000BA3B60 /* FaresInteractor.swift */; };
+		B4678A06243E83AD00BA3B60 /* FaresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A05243E83AD00BA3B60 /* FaresPresenter.swift */; };
+		B4678A09243E83DB00BA3B60 /* FaresTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A08243E83DB00BA3B60 /* FaresTableDelegate.swift */; };
+		B4678A0B243E83E700BA3B60 /* FaresTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A0A243E83E700BA3B60 /* FaresTableDataSource.swift */; };
+		B4678A0D243E849E00BA3B60 /* FareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4678A0C243E849E00BA3B60 /* FareCell.swift */; };
+		B4C9431024435A650070BF93 /* OrderedDictionary in Frameworks */ = {isa = PBXBuildFile; productRef = B4C9430F24435A650070BF93 /* OrderedDictionary */; };
+		B4FA43D92441D5C8004E63A1 /* FaresDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA43D82441D5C8004E63A1 /* FaresDataFlow.swift */; };
+		B4FA43DB2441ED4E004E63A1 /* SearchFormDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA43DA2441ED4E004E63A1 /* SearchFormDataFlow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B458AE742442336A00D60597 /* TestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIClient.swift; sourceTree = "<group>"; };
+		B458AE7624424AAD00D60597 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		B45A45BE24427809003C8248 /* GetTokenResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenResponseParser.swift; sourceTree = "<group>"; };
+		B45A45C024427AE5003C8248 /* GetFaresResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFaresResponseParser.swift; sourceTree = "<group>"; };
+		B45A45C2244288AB003C8248 /* APITask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITask.swift; sourceTree = "<group>"; };
+		B45A45C424428FE6003C8248 /* biletix_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "biletix_swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		B45A45C524428FE6003C8248 /* BTXXmlFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTXXmlFormatter.h; sourceTree = "<group>"; };
+		B45A45C624428FE6003C8248 /* BTXXmlFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTXXmlFormatter.m; sourceTree = "<group>"; };
+		B46789C3243E5DBB00BA3B60 /* biletix_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biletix_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46789C6243E5DBB00BA3B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B46789CA243E5DBB00BA3B60 /* SearchFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
+		B46789D2243E5DBE00BA3B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B46789D7243E5DBE00BA3B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B46789DD243E646800BA3B60 /* FaresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresViewController.swift; sourceTree = "<group>"; };
+		B46789DE243E646800BA3B60 /* FareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FareCell.xib; sourceTree = "<group>"; };
+		B46789E1243E648500BA3B60 /* SearchFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchFormViewController.xib; sourceTree = "<group>"; };
+		B46789E9243E668300BA3B60 /* Date+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extra.swift"; sourceTree = "<group>"; };
+		B46789EB243E66DA00BA3B60 /* String+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		B46789ED243E6E1B00BA3B60 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B46789EF243E725500BA3B60 /* SearchFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormInteractor.swift; sourceTree = "<group>"; };
+		B46789F1243E728100BA3B60 /* SearchFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormPresenter.swift; sourceTree = "<group>"; };
+		B46789F3243E72DF00BA3B60 /* SearchFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormBuilder.swift; sourceTree = "<group>"; };
+		B46789F8243E78D800BA3B60 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		B46789FA243E793A00BA3B60 /* Fare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		B46789FF243E7F7B00BA3B60 /* FareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareProvider.swift; sourceTree = "<group>"; };
+		B4678A01243E818300BA3B60 /* FaresBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresBuilder.swift; sourceTree = "<group>"; };
+		B4678A03243E83A000BA3B60 /* FaresInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresInteractor.swift; sourceTree = "<group>"; };
+		B4678A05243E83AD00BA3B60 /* FaresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresPresenter.swift; sourceTree = "<group>"; };
+		B4678A08243E83DB00BA3B60 /* FaresTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresTableDelegate.swift; sourceTree = "<group>"; };
+		B4678A0A243E83E700BA3B60 /* FaresTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresTableDataSource.swift; sourceTree = "<group>"; };
+		B4678A0C243E849E00BA3B60 /* FareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareCell.swift; sourceTree = "<group>"; };
+		B4FA43D82441D5C8004E63A1 /* FaresDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaresDataFlow.swift; sourceTree = "<group>"; };
+		B4FA43DA2441ED4E004E63A1 /* SearchFormDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormDataFlow.swift; sourceTree = "<group>"; };
+		D992703E76462A43D0DD8F19 /* libPods-biletix_swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-biletix_swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF800A5FA5597D600D96FDC7 /* Pods-biletix_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_swift.debug.xcconfig"; path = "Target Support Files/Pods-biletix_swift/Pods-biletix_swift.debug.xcconfig"; sourceTree = "<group>"; };
+		F591A2ACEE7344CF63A9C380 /* Pods-biletix_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biletix_swift.release.xcconfig"; path = "Target Support Files/Pods-biletix_swift/Pods-biletix_swift.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B46789C0243E5DBB00BA3B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C9431024435A650070BF93 /* OrderedDictionary in Frameworks */,
+				309A1B0D3D596EB689FACE6C /* libPods-biletix_swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		611E8708157419FDC2A742BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF800A5FA5597D600D96FDC7 /* Pods-biletix_swift.debug.xcconfig */,
+				F591A2ACEE7344CF63A9C380 /* Pods-biletix_swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		786738E7BB8CE4075C6EC337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D992703E76462A43D0DD8F19 /* libPods-biletix_swift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B458AE73244232EE00D60597 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B458AE742442336A00D60597 /* TestAPIClient.swift */,
+				B45A45C2244288AB003C8248 /* APITask.swift */,
+				B458AE7624424AAD00D60597 /* APIErrors.swift */,
+				B4C943112443715B0070BF93 /* Parsers */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B46789BA243E5DBB00BA3B60 = {
+			isa = PBXGroup;
+			children = (
+				B46789C5243E5DBB00BA3B60 /* biletix_swift */,
+				B46789C4243E5DBB00BA3B60 /* Products */,
+				611E8708157419FDC2A742BD /* Pods */,
+				786738E7BB8CE4075C6EC337 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B46789C4243E5DBB00BA3B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B46789C3243E5DBB00BA3B60 /* biletix_swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B46789C5243E5DBB00BA3B60 /* biletix_swift */ = {
+			isa = PBXGroup;
+			children = (
+				B46789C6243E5DBB00BA3B60 /* AppDelegate.swift */,
+				B458AE73244232EE00D60597 /* Network */,
+				B46789F5243E751800BA3B60 /* Model */,
+				B46789FE243E7F5100BA3B60 /* Provider */,
+				B46789E4243E64AD00BA3B60 /* Modules */,
+				B46789E8243E667300BA3B60 /* Helpers */,
+				B46789E3243E64A400BA3B60 /* Resources */,
+			);
+			path = biletix_swift;
+			sourceTree = "<group>";
+		};
+		B46789E3243E64A400BA3B60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B46789ED243E6E1B00BA3B60 /* LaunchScreen.storyboard */,
+				B46789D2243E5DBE00BA3B60 /* Assets.xcassets */,
+				B46789D7243E5DBE00BA3B60 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B46789E4243E64AD00BA3B60 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B46789E6243E64D200BA3B60 /* SearchForm */,
+				B46789E7243E64DE00BA3B60 /* Fares */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B46789E5243E64B600BA3B60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B46789E1243E648500BA3B60 /* SearchFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B46789E6243E64D200BA3B60 /* SearchForm */ = {
+			isa = PBXGroup;
+			children = (
+				B46789F3243E72DF00BA3B60 /* SearchFormBuilder.swift */,
+				B46789CA243E5DBB00BA3B60 /* SearchFormViewController.swift */,
+				B46789EF243E725500BA3B60 /* SearchFormInteractor.swift */,
+				B46789F1243E728100BA3B60 /* SearchFormPresenter.swift */,
+				B4FA43DA2441ED4E004E63A1 /* SearchFormDataFlow.swift */,
+				B46789E5243E64B600BA3B60 /* View */,
+			);
+			path = SearchForm;
+			sourceTree = "<group>";
+		};
+		B46789E7243E64DE00BA3B60 /* Fares */ = {
+			isa = PBXGroup;
+			children = (
+				B4678A01243E818300BA3B60 /* FaresBuilder.swift */,
+				B46789DD243E646800BA3B60 /* FaresViewController.swift */,
+				B4678A03243E83A000BA3B60 /* FaresInteractor.swift */,
+				B4678A05243E83AD00BA3B60 /* FaresPresenter.swift */,
+				B4678A08243E83DB00BA3B60 /* FaresTableDelegate.swift */,
+				B4678A0A243E83E700BA3B60 /* FaresTableDataSource.swift */,
+				B4FA43D82441D5C8004E63A1 /* FaresDataFlow.swift */,
+				B4678A07243E83B700BA3B60 /* View */,
+			);
+			path = Fares;
+			sourceTree = "<group>";
+		};
+		B46789E8243E667300BA3B60 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B45A45C524428FE6003C8248 /* BTXXmlFormatter.h */,
+				B45A45C624428FE6003C8248 /* BTXXmlFormatter.m */,
+				B46789E9243E668300BA3B60 /* Date+Extra.swift */,
+				B46789EB243E66DA00BA3B60 /* String+Extra.swift */,
+				B45A45C424428FE6003C8248 /* biletix_swift-Bridging-Header.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B46789F5243E751800BA3B60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B46789F8243E78D800BA3B60 /* Flight.swift */,
+				B46789FA243E793A00BA3B60 /* Fare.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B46789FE243E7F5100BA3B60 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				B46789FF243E7F7B00BA3B60 /* FareProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		B4678A07243E83B700BA3B60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B46789DE243E646800BA3B60 /* FareCell.xib */,
+				B4678A0C243E849E00BA3B60 /* FareCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4C943112443715B0070BF93 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				B45A45BE24427809003C8248 /* GetTokenResponseParser.swift */,
+				B45A45C024427AE5003C8248 /* GetFaresResponseParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B46789C2243E5DBB00BA3B60 /* biletix_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46789DA243E5DBE00BA3B60 /* Build configuration list for PBXNativeTarget "biletix_swift" */;
+			buildPhases = (
+				7EC77256EFFC30103EADD7E7 /* [CP] Check Pods Manifest.lock */,
+				B46789BF243E5DBB00BA3B60 /* Sources */,
+				B46789C0243E5DBB00BA3B60 /* Frameworks */,
+				B46789C1243E5DBB00BA3B60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = biletix_swift;
+			packageProductDependencies = (
+				B4C9430F24435A650070BF93 /* OrderedDictionary */,
+			);
+			productName = biletix_swift;
+			productReference = B46789C3243E5DBB00BA3B60 /* biletix_swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B46789BB243E5DBB00BA3B60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = squatch;
+				TargetAttributes = {
+					B46789C2243E5DBB00BA3B60 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+				};
+			};
+			buildConfigurationList = B46789BE243E5DBB00BA3B60 /* Build configuration list for PBXProject "biletix_swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B46789BA243E5DBB00BA3B60;
+			packageReferences = (
+				B4C9430E24435A650070BF93 /* XCRemoteSwiftPackageReference "OrderedDictionary" */,
+			);
+			productRefGroup = B46789C4243E5DBB00BA3B60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B46789C2243E5DBB00BA3B60 /* biletix_swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B46789C1243E5DBB00BA3B60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46789E0243E646800BA3B60 /* FareCell.xib in Resources */,
+				B46789EE243E6E1B00BA3B60 /* LaunchScreen.storyboard in Resources */,
+				B46789D3243E5DBE00BA3B60 /* Assets.xcassets in Resources */,
+				B46789E2243E648500BA3B60 /* SearchFormViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EC77256EFFC30103EADD7E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-biletix_swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B46789BF243E5DBB00BA3B60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46789DF243E646800BA3B60 /* FaresViewController.swift in Sources */,
+				B46789CB243E5DBB00BA3B60 /* SearchFormViewController.swift in Sources */,
+				B4678A00243E7F7B00BA3B60 /* FareProvider.swift in Sources */,
+				B458AE752442336A00D60597 /* TestAPIClient.swift in Sources */,
+				B45A45BF24427809003C8248 /* GetTokenResponseParser.swift in Sources */,
+				B46789F4243E72DF00BA3B60 /* SearchFormBuilder.swift in Sources */,
+				B4678A0D243E849E00BA3B60 /* FareCell.swift in Sources */,
+				B46789EA243E668300BA3B60 /* Date+Extra.swift in Sources */,
+				B4678A04243E83A000BA3B60 /* FaresInteractor.swift in Sources */,
+				B46789C7243E5DBB00BA3B60 /* AppDelegate.swift in Sources */,
+				B4678A06243E83AD00BA3B60 /* FaresPresenter.swift in Sources */,
+				B46789EC243E66DA00BA3B60 /* String+Extra.swift in Sources */,
+				B4678A0B243E83E700BA3B60 /* FaresTableDataSource.swift in Sources */,
+				B46789F2243E728100BA3B60 /* SearchFormPresenter.swift in Sources */,
+				B4678A09243E83DB00BA3B60 /* FaresTableDelegate.swift in Sources */,
+				B45A45C724428FE6003C8248 /* BTXXmlFormatter.m in Sources */,
+				B458AE7724424AAD00D60597 /* APIErrors.swift in Sources */,
+				B45A45C124427AE5003C8248 /* GetFaresResponseParser.swift in Sources */,
+				B4FA43D92441D5C8004E63A1 /* FaresDataFlow.swift in Sources */,
+				B4FA43DB2441ED4E004E63A1 /* SearchFormDataFlow.swift in Sources */,
+				B46789F9243E78D800BA3B60 /* Flight.swift in Sources */,
+				B4678A02243E818300BA3B60 /* FaresBuilder.swift in Sources */,
+				B45A45C3244288AB003C8248 /* APITask.swift in Sources */,
+				B46789F0243E725500BA3B60 /* SearchFormInteractor.swift in Sources */,
+				B46789FB243E793A00BA3B60 /* Fare.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B46789D8243E5DBE00BA3B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B46789D9243E5DBE00BA3B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B46789DB243E5DBE00BA3B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF800A5FA5597D600D96FDC7 /* Pods-biletix_swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HVARA599XL;
+				INFOPLIST_FILE = biletix_swift/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.squatch.biletix-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "biletix_swift/Helpers/biletix_swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B46789DC243E5DBE00BA3B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F591A2ACEE7344CF63A9C380 /* Pods-biletix_swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HVARA599XL;
+				INFOPLIST_FILE = biletix_swift/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.squatch.biletix-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "biletix_swift/Helpers/biletix_swift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B46789BE243E5DBB00BA3B60 /* Build configuration list for PBXProject "biletix_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46789D8243E5DBE00BA3B60 /* Debug */,
+				B46789D9243E5DBE00BA3B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46789DA243E5DBE00BA3B60 /* Build configuration list for PBXNativeTarget "biletix_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46789DB243E5DBE00BA3B60 /* Debug */,
+				B46789DC243E5DBE00BA3B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4C9430E24435A650070BF93 /* XCRemoteSwiftPackageReference "OrderedDictionary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/OrderedDictionary.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4C9430F24435A650070BF93 /* OrderedDictionary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4C9430E24435A650070BF93 /* XCRemoteSwiftPackageReference "OrderedDictionary" */;
+			productName = OrderedDictionary;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B46789BB243E5DBB00BA3B60 /* Project object */;
+}
